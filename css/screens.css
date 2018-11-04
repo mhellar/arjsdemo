@@ -1,0 +1,101 @@
+body {
+  background-color: white;
+  font-family: 'Oswald', sans-serif;
+}
+
+.screen {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.target {
+  position: relative;
+  margin: 0 auto;
+  width: 200px;
+  height: 200px;
+  border-color: #c41230;
+}
+
+.target__cta {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+}
+
+.target__tl, .target__tr, .target__bl, .target__br {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-style: solid;
+  border-width: 4px;
+}
+
+.target__tl {
+  border-right: 0;
+  border-bottom: 0;
+}
+
+.target__tr {
+  right: 0;
+  border-left: 0;
+  border-bottom: 0
+}
+
+.target__bl {
+  bottom: 0;
+  border-right: 0;
+  border-top: 0
+}
+
+.target__br {
+  right: 0;
+  bottom: 0;
+  border-left: 0;
+  border-top: 0
+}
+
+#splash__logo {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 200px;
+  margin: 0 auto;
+}
+
+#splash__logo img {
+  width: 200px;
+  height: auto;
+}
+
+#splash__logo h1 {
+  text-align: center;
+  font-size: 14px;
+  font-weight: normal;
+  color: gray;
+}
+
+.scan__block {
+  display: block;
+  height: 50%;
+  text-align: center;
+  text-decoration: none;
+  padding: 1em;
+}
+
+#scan__ar {
+  color: #c41230;
+}
+
+#scan__receipt {
+  background-color: #c41230;
+  color: white;
+}
+
+#scan__receipt .target {
+  border-color: white;
+}
