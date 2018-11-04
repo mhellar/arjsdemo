@@ -10,11 +10,13 @@
     <script src="https://rawgit.com/mayognaise/aframe-gif-shader/master/dist/aframe-gif-shader.min.js"></script>
     <script>
         AFRAME.registerComponent('vidhandler', {
-            // ...
+            schema: {
+            element: {type: 'string', default: '#vid'}
+            },
             init: function () {
                 // Set up initial state and variables.
                 this.toggle = false;
-                this.vid = document.querySelector("#vid")
+                this.vid = document.querySelector(this.data.element)
                 this.vid.pause();
             },
             tick: function () {
@@ -41,8 +43,8 @@
             <video id="vid" src="vid/bus.mp4" loop="true" crossorigin>
         </a-assets>
 
-        <a-marker id="memarker" preset="hiro" vidhandler>
-            <a-plane scale="1 1 1" width="2" rotation="-90 0 0" position="0 0 0" material='transparent:true;opacity: 0.9;src:#vid'>
+        <a-marker id="memarker" preset="hiro" vidhandler="element: #vid;">
+            <a-plane scale=" 1 1 1" width="2" rotation="-90 0 0" position="0 0 0" material='transparent:true;opacity: 0.9;src:#vid'>
             </a-plane>
         </a-marker>
 
