@@ -33,26 +33,26 @@
             }
         });
 
-                AFRAME.registerComponent('vidhandler1', {
+            AFRAME.registerComponent('vidhandler1', {
             schema: {
             element: {type: 'string', default: '#vid1'}
             },
             init: function () {
                 // Set up initial state and variables.
                 this.toggle = false;
-                this.vid = document.querySelector(this.data.element)
-                this.vid.pause();
+                this.vid1 = document.querySelector(this.data.element)
+                this.vid1.pause();
             },
             tick: function () {
 
                 if (this.el.object3D.visible == true) {
                     if (!this.toggle) {
                         this.toggle = true;
-                        this.vid.play();
+                        this.vid1.play();
                     }
                 } else {
                     this.toggle = false;
-                    this.vid.pause();
+                    this.vid1.pause();
                 }
             }
         });
