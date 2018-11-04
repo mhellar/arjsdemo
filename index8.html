@@ -5,7 +5,25 @@
 <!-- include ar.js for A-Frame -->
 <script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
 
+
+<link rel="stylesheet" type="text/css" href="css/style.css">
+
 <body style='margin : 0px; overflow: hidden;'>
+
+    <div id="container" class="container">
+        <div class="info">
+          <div class="company"><a href="http://www.influentialreality.com" target="_blank">influentialreality.com</a></div>
+          <div class="title">Levi's AR App</div>
+          <div class="logo"><a href="http://www.influentialreality.com" target="_blank"><img src="img/cec_logo.png"></a></div>
+          <a class="button" id="start_experience" href="#">start experience</a>
+          <div class="instructions">
+            <div><strong>VR</strong>: Hand controllers and teleport with trigger.</div>
+            <div><strong>Desktop</strong>: Keyboard (WASD/arrows) and mouse.</div>
+            <div><strong>Mobile</strong>: Gaze cursor and teleportation.</div>
+          </div>
+        </div>
+      </div>
+      
     <a-scene embedded arjs>
         <!-- Aframe asset system. preload assets here -->
         <a-assets>
@@ -27,3 +45,15 @@
         <a-marker-camera preset='hiro'></a-marker-camera>
     </a-scene>
 </body>
+<script>
+
+
+
+    var startExperienteBtn = document.getElementById('start_experience');
+    
+    startExperienteBtn.onclick = function(){
+        document.getElementById('container').outerHTML = '';
+        document.getElementsByTagName('a-scene')[0].style.zIndex = 'auto';
+    };
+    </script>
+</html>
