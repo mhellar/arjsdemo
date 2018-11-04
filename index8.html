@@ -9,14 +9,17 @@
     <a-scene embedded arjs>
         <!-- Aframe asset system. preload assets here -->
         <a-assets>
-            <a-asset-item id="robot" src="models/woman_jeans/scene.gltf">
+                <a-assets>
+                    <video id="video" autoplay loop="true" src="vid/bus.mp4">
+             </a-assets>
+        
         </a-assets>
 
         <!-- create your content here. just a box for now -->
         <!-- add animation-mixer inside GLTF model for animation -->
+    
 
-                <a-gltf-model position="0.20168121799399225 0.903 0.099" src="#robot">
-                </a-gltf-model>
+        <a-video src="#video" width="8" height="4.5" position="0 0 0" rotation="-90 0 0" scale="0.2 0.2 0.2" position="0 1 -1"></a-video>
             <!-- place sound inside model for spatial sound -->
 
         </a-gltf-model>
