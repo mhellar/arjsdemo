@@ -1,0 +1,13 @@
+{
+  "display": "fullscreen",
+  "icons": [
+    {
+      "src": "img/icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ],
+  "name": "Levi AR",
+  "short_name": "Levi AR",
+  "start_url": "/arjsdemo/screens.html"
+}
