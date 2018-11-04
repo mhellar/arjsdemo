@@ -32,7 +32,34 @@
                 }
             }
         });
+
+            AFRAME.registerComponent('vidhandler1', {
+            schema: {
+            element: {type: 'string', default: '#vid1'}
+            },
+            init: function () {
+                // Set up initial state and variables.
+                this.toggle = false;
+                this.vid1 = document.querySelector(this.data.element)
+                this.vid1.pause();
+            },
+            tick: function () {
+
+                if (this.el.object3D.visible == true) {
+                    if (!this.toggle) {
+                        this.toggle = true;
+                        this.vid1.play();
+                    }
+                } else {
+                    this.toggle = false;
+                    this.vid1.pause();
+                }
+            }
+        });
     </script>
+    
+
+
 
 </head>
 
@@ -51,23 +78,23 @@
             </a-plane>
         </a-marker>
 
-        <a-marker preset='custom' type="pattern" url='patt/oldlogo.patt' vidhandler="element: #vid1;">
+        <a-marker preset='custom' type="pattern" url='patt/oldlogo.patt' vidhandler1="element: #vid1;">
             <a-plane scale=" 1 1 1" width="2" rotation="-90 0 0" position="0 0 0" material='transparent:true;opacity: 0.9;src:#vid1'>
             </a-plane>
         </a-marker>
 
         
-        <a-marker preset='custom' type="pattern" url='patt/levis1.patt' vidhandler="element: #vid1;">
+        <a-marker preset='custom' type="pattern" url='patt/levis1.patt' vidhandler1="element: #vid1;">
             <a-plane scale=" 1 1 1" width="2" rotation="-90 0 0" position="0 0 0" material='transparent:true;opacity: 0.9;src:#vid1'>
             </a-plane>
         </a-marker>
 
-        <a-marker preset='custom' type="pattern" url='patt/org-marker.patt' vidhandler="element: #vid1;">
+        <a-marker preset='custom' type="pattern" url='patt/org-marker.patt' vidhandler1="element: #vid1;">
             <a-plane scale=" 1 1 1" width="2" rotation="-90 0 0" position="0 0 0" material='transparent:true;opacity: 0.9;src:#vid1'>
             </a-plane>
         </a-marker>
 
-        <a-marker preset='custom' type="pattern" url='patt/jacq.patt' vidhandler="element: #vid1;">
+        <a-marker preset='custom' type="pattern" url='patt/jacq.patt' vidhandler1="element: #vid1;">
             <a-plane scale=" 1 1 1" width="2" rotation="-90 0 0" position="0 0 0" material='transparent:true;opacity: 0.9;src:#vid1'>
             </a-plane>
         </a-marker>
