@@ -7,11 +7,12 @@
     <script src="js/aframe-ar.js"> </script>
     <script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v3.8.4/dist/aframe-extras.min.js"></script>
 
-    <script src="https://rawgit.com/mayognaise/aframe-gif-shader/master/dist/aframe-gif-shader.min.js"></script>
+    <script
+        src="https://cdn.jsdelivr.net/gh/aframevr/aframe@934b8d358a2c458efdc8d65fcb6946f7303f0b51/dist/aframe-master.min.js"></script>
     <script>
         AFRAME.registerComponent('vidhandler', {
             schema: {
-            element: {type: 'string', default: '#vid'}
+                element: { type: 'string', default: '#vid' }
             },
             init: function () {
                 // Set up initial state and variables.
@@ -33,21 +34,21 @@
             }
         });
     </script>
-
 </head>
 
 
 <body style='margin : 0px; overflow: hidden;'>
-    <a-scene embedded artoolkit='debugUIEnabled: false; sourceType: webcam; detectionMode: mono; maxDetectionRate: 30; canvasWidth: 240; canvasHeight: 180;'>
+    <a-scene embedded
+        artoolkit='debugUIEnabled: false; sourceType: webcam; detectionMode: mono; maxDetectionRate: 30; canvasWidth: 240; canvasHeight: 180;'>
         <a-assets>
             <video id="vid" src="vid/bus.mp4" loop="true" crossorigin>
         </a-assets>
 
         <a-marker id="memarker" preset="hiro" vidhandler="element: #vid;">
-            <a-plane scale=" 1 1 1" width="2" rotation="-90 0 0" position="0 0 0" material='transparent:true;opacity: 0.9;src:#vid'>
+            <a-plane scale=" 1 1 1" width="2" rotation="-90 0 0" position="0 0 0"
+                material='transparent:true;opacity: 0.9;src:#vid'>
             </a-plane>
         </a-marker>
-
 
         <a-marker preset='custom' type="pattern" url='patt/levis1.patt'>
             <a-box position='0 0.5 0' material='color: red;'></a-box>
