@@ -12,11 +12,11 @@
     <!-- <a-scene embedded arjs='sourceType: image; sourceUrl:../../data/images/armchair.jpg;'> -->
     <a-scene embedded arjs='sourceType: webcam;'>
         <a-assets>
-            <a-asset-item id="person" src="future_city_park/scene.gltf"></a-asset-item>
+            <a-asset-item id="person" src="map_4edaf618-b6a2-4f19-90f6-0e27c3487832_densified_gltf/map_4edaf618-b6a2-4f19-90f6-0e27c3487832_densified_mesh_textured_lod0z.gltf"></a-asset-item>
           </a-assets>
             <a-marker-camera type="pattern" url="patt/1.patt">
-
-                  <a-entity gltf-model="#person"  position="0 0 0" scale=".041 .041 .041" animation-mixer></a-entity>
+                <a-light type="point" color="white" position="0 2 0"></a-light>
+                  <a-entity gltf-model="map_4edaf618-b6a2-4f19-90f6-0e27c3487832_densified_gltf/map_4edaf618-b6a2-4f19-90f6-0e27c3487832_densified_mesh_textured_lod0z.gltf" position="0 1.07291 2.48445" scale="0.79555 0.79555 0.79555" animation-mixer=""></a-entity>
             </a-marker-camera>
 
 
